@@ -5,7 +5,7 @@ class Character:
         self.element = element
         self.main_stat = main_stat
 
-    def sett_atk(self):
+    def sett_atk(self):      #если главный стат персонажа атака -- смотрим роль подбираем сеты
         if (self.main_stat == "ATK") and (self.role == "support"):
             print("Use artifact sets «Gladiator's Finale», «Shimenawa's Reminiscence»")
         elif (self.main_stat == "ATK") and (self.role == "dps"):
@@ -13,7 +13,7 @@ class Character:
         elif (self.main_stat == "ATK") and (self.role == "sup dps"):
             print("Use artifact sets «Marechaussee Hunter», «Shimenawa's Reminiscence»")
 
-    def sett_hp(self):
+    def sett_hp(self):    #смотрим роль персов, играющихся от хп
         if (self.main_stat == "HP") and (self.role == "support"):
             print("Use artifact sets «Tenacity of the Millelith» and «Ocean-Hued Clam»")
         elif (self.main_stat == "HP") and (self.role == "dps"):
@@ -21,7 +21,7 @@ class Character:
         elif (self.main_stat == "HP") and (self.role == "sup dps"):
             print("Use artifact sets «Vourukasha's Glow», «Marechaussee Hunter»")
 
-    def sett_def(self):
+    def sett_def(self):     #смотрим роль персов, играющихся от защиты (в основном щитовики)
         if (self.main_stat == "DEF") and (self.role == "support"):
             print("Use artifact sets «Husk of Opulent Dreams» and «Retracing Bolide»")
         elif (self.main_stat == "DEF") and (self.role == "sup dps"):
@@ -41,7 +41,7 @@ region_input = input("Choose region: ")
 element_input = input("Choose element: ")
 role_input = input("Choose character's role: ")
 
-list1 = [Sayu, Razor, Kokomi]
+list1 = [Sayu, Razor, Kokomi, Elan, Noelle, Xiangling, Mona, Thoma]
 list2 = [i for i in list1 if i.region == region_input]
 list3 = [i for i in list2 if i.element == element_input]
 list4 = [i for i in list3 if i.role == role_input]
